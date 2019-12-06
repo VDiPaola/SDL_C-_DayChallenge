@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C64A43F323990618006B97CC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64A43F223990618006B97CC /* main.cpp */; };
+		C64A43FB23990677006B97CC /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64A43FA23990677006B97CC /* SDL2.framework */; };
+		C64A43FE23990A05006B97CC /* screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64A43FD23990A05006B97CC /* screen.cpp */; };
+		C64A440023990D00006B97CC /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64A43FF23990D00006B97CC /* SDL2_image.framework */; };
+		C64A440F239947AC006B97CC /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64A440D239947AC006B97CC /* player.cpp */; };
+		C64A441223996178006B97CC /* monster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64A441023996178006B97CC /* monster.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		C64A43EF23990618006B97CC /* SDL_Program */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDL_Program; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64A43F223990618006B97CC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C64A43FA23990677006B97CC /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		C64A43FC2399088B006B97CC /* screen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = screen.h; sourceTree = "<group>"; };
+		C64A43FD23990A05006B97CC /* screen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = screen.cpp; sourceTree = "<group>"; };
+		C64A43FF23990D00006B97CC /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		C64A440523991F99006B97CC /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		C64A440623992479006B97CC /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = SDL_Program/assets; sourceTree = "<group>"; };
+		C64A440D239947AC006B97CC /* player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
+		C64A440E239947AC006B97CC /* player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = player.hpp; sourceTree = "<group>"; };
+		C64A441023996178006B97CC /* monster.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = monster.cpp; sourceTree = "<group>"; };
+		C64A441123996178006B97CC /* monster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = monster.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64A440023990D00006B97CC /* SDL2_image.framework in Frameworks */,
+				C64A43FB23990677006B97CC /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +60,7 @@
 			children = (
 				C64A43F123990618006B97CC /* SDL_Program */,
 				C64A43F023990618006B97CC /* Products */,
+				C64A43F923990677006B97CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +75,26 @@
 		C64A43F123990618006B97CC /* SDL_Program */ = {
 			isa = PBXGroup;
 			children = (
+				C64A440523991F99006B97CC /* assets */,
 				C64A43F223990618006B97CC /* main.cpp */,
+				C64A43FC2399088B006B97CC /* screen.h */,
+				C64A43FD23990A05006B97CC /* screen.cpp */,
+				C64A440D239947AC006B97CC /* player.cpp */,
+				C64A440E239947AC006B97CC /* player.hpp */,
+				C64A441023996178006B97CC /* monster.cpp */,
+				C64A441123996178006B97CC /* monster.hpp */,
 			);
 			path = SDL_Program;
+			sourceTree = "<group>";
+		};
+		C64A43F923990677006B97CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C64A440623992479006B97CC /* assets */,
+				C64A43FF23990D00006B97CC /* SDL2_image.framework */,
+				C64A43FA23990677006B97CC /* SDL2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64A441223996178006B97CC /* monster.cpp in Sources */,
 				C64A43F323990618006B97CC /* main.cpp in Sources */,
+				C64A43FE23990A05006B97CC /* screen.cpp in Sources */,
+				C64A440F239947AC006B97CC /* player.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +278,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +292,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

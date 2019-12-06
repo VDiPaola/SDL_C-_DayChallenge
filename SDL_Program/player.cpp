@@ -7,3 +7,14 @@
 //
 
 #include "player.hpp"
+
+
+player::player(std::string Newname){
+    name = Newname;
+}
+
+void player::move(int x, int y){
+    xpos += x;
+    ypos += y;
+}
+
